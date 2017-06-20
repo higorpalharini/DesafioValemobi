@@ -1,0 +1,12 @@
+DirectoryIndex public/gentelella-master/production/calendar.html
+
+RewriteEngine on
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+RewriteRule ^$ public/gentelella-master/production/calendar.html [L]
+RewriteRule ^public/$ public/    [QSA,L]
+RewriteRule ^$ index.php?path=$1 [QSA,L]
+RewriteRule ^(.+)$ index.php?path=$1 [QSA,L]
